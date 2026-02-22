@@ -23,7 +23,7 @@ export const InvitationContent = () => {
           />
           {/* Overlay for text readability + bottom fade to olive (matches countdown section) */}
           <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute bottom-0 left-0 right-0 h-1/8 bg-gradient-to-b from-transparent to-cream" />
+          <div className="absolute bottom-0 left-0 right-0 h-1/10 bg-gradient-to-b from-transparent to-cream" />
         </div>
 
 <motion.div
