@@ -25,11 +25,11 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 };
 
 const TimeUnit = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center justify-center bg-olive-light/20 backdrop-blur-sm shadow-sm border border-white/10 rounded-xl w-20 h-24 sm:w-28 sm:h-32">
-    <span className="font-serif text-3xl sm:text-5xl text-white mb-1">
+  <div className="flex flex-col items-center justify-center bg-olive shadow-sm border border-olive/20 rounded-xl w-20 h-24 sm:w-28 sm:h-32">
+    <span className="font-serif text-3xl sm:text-5xl text-cream mb-1">
       {value.toString().padStart(2, '0')}
     </span>
-    <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/60 font-bold">
+    <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-cream/60 font-bold">
       {label}
     </span>
   </div>
