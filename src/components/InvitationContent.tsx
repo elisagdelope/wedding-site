@@ -174,7 +174,7 @@ export const InvitationContent = () => {
                 <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">Salida del autobús</h4>
                 <div className="space-y-1">
                   <p className="font-serif text-3xl text-olive">Plaza Imperial Tarraco</p>
-                  <p className="font-serif text-5xl text-olive/30">12:30h</p>
+                  <p className="font-serif text-5xl text-olive/30">14:00h</p>
                 </div>
               </div>
               
@@ -187,7 +187,10 @@ export const InvitationContent = () => {
               </div>
             </div>
             
-            <div className="pt-8 border-t border-olive/10">
+            <div className="pt-8 border-t border-olive/10 space-y-4">
+              <p className="text-olive/70 text-base leading-relaxed">
+                La finca cuenta con un amplio parking, así que no hay ningún problema si preferís desplazaros en coche.
+              </p>
               <p className="font-serif italic text-olive/50 text-lg">
                 * Por favor, indicad en vuestro RSVP si necesitáis transporte
               </p>
