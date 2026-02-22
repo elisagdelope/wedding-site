@@ -127,15 +127,17 @@ export const InvitationContent = () => {
             </div>
             
             {/* Google Maps Preview */}
-            <div className="w-full h-64 rounded-3xl overflow-hidden shadow-lg border border-olive/10">
+            <div className="mb-6 rounded-3xl overflow-hidden border border-olive/20 shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3000.413728646141!2d1.194367315340314!3d41.14483707928682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3f6991060936b%3A0x7623999999999999!2sMas%20Folch!5e0!3m2!1ses!2ses!4v1624350000000!5m2!1ses!2ses" 
+                src="https://www.google.com/maps?q=Mas%20Folch%20Constantí&output=embed" 
                 width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
+                height="250" 
                 allowFullScreen={true} 
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade" 
+                title="Mapa de Mas Folch" 
+                className="sepia-[0.15] hover:sepia-0 transition-all duration-500" 
+                style={{ border: 0 }}
               ></iframe>
             </div>
           </div>
