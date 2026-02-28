@@ -64,18 +64,23 @@ export const InvitationContent = () => {
       </section>
 
       {/* Ceremony Details Section */}
-      <section className="relative py-48 sm:py-56 px-6 overflow-hidden">
+      <section className="px-6">
+        <div className="max-w-3xl mx-auto text-center pt-24 pb-8">
+          <h2 className="font-serif text-5xl text-olive">La ceremonia</h2>
+        </div>
+      </section>
+      <section className="relative py-20 sm:py-40 md:py-56 lg:py-72 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/assets/catedral-watercolor.png"
             alt="Catedral de Tarragona"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover md:object-contain"
           />
           <div className="absolute inset-0 bg-cream/60" />
           <div className="absolute top-0 left-0 right-0 h-1/6 bg-gradient-to-b from-cream to-transparent z-10" />
+          <div className="absolute bottom-0 left-0 right-0 h-1/6 bg-gradient-to-b from-transparent to-cream z-10" />
         </div>
-        <div className="relative z-10 max-w-3xl mx-auto text-center space-y-10">
-          <h2 className="font-serif text-4xl sm:text-5xl text-olive">La ceremonia</h2>
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center gap-3">
               <Calendar className="w-6 h-6 text-olive/50" />
