@@ -113,7 +113,7 @@ export const InvitationContent = () => {
             <div className="flex-1 space-y-8 md:pt-8">
               <h2 className="font-serif text-5xl text-olive">La celebración</h2>
               <p className="text-olive/70 text-lg leading-relaxed">
-                Nos trasladaremos a Mas Folch para celebrar el banquete y la fiesta en un entorno idílico, rodeados de naturaleza y buena compañía.
+                Tras el 'sí, quiero', os esperamos en Mas Folch para celebrar, brindar y bailar rodeados de naturaleza y buena compañía.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
