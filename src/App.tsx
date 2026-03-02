@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Envelope } from './components/Envelope';
 import { InvitationContent } from './components/InvitationContent';
-import { Birds } from './components/Birds';
-
 export default function App() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
     <main className="relative min-h-screen bg-offwhite">
-      <Birds />
-      
+
       <AnimatePresence mode="wait">
         {!isOpened ? (
           <motion.div
