@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Calendar, Clock, Music, Heart, Send } from 'lucide-react';
+import { MapPin, Calendar, Clock, Music, Heart, Send, Hotel, ExternalLink } from 'lucide-react';
 import { Countdown } from './Countdown';
 import { RSVPModal } from './RSVPModal';
 
@@ -199,6 +199,82 @@ export const InvitationContent = () => {
               <p className="font-serif italic text-olive/50 text-lg">
                 * Por favor, indicad en vuestro RSVP si necesitáis transporte
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Accommodation Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-5xl text-olive text-center mb-6">Alojamiento</h2>
+          <p className="text-olive/60 text-center font-serif italic text-lg mb-16 max-w-2xl mx-auto">
+            Hemos conseguido descuentos especiales en estos hoteles para nuestros invitados.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Hotel Lauria */}
+            <div className="border border-olive/10 rounded-2xl p-8 space-y-5">
+              <div className="flex items-center gap-3">
+                <Hotel className="w-5 h-5 text-olive/40" />
+                <h3 className="font-serif text-2xl text-olive">Hotel Lauria</h3>
+              </div>
+
+              <div className="space-y-3 text-olive/70 text-sm leading-relaxed">
+                <p>
+                  <span className="font-medium text-olive">17% de descuento</span> sobre tarifa flexible
+                </p>
+                <div className="bg-offwhite rounded-lg px-4 py-3 flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-olive/40">Código</span>
+                  <span className="font-medium text-olive tracking-wide">BODAELISAJORDI</span>
+                </div>
+                <ul className="space-y-1.5 text-olive/60">
+                  <li>Válido del 25/09 al 11/10/2026</li>
+                  <li>Estancia mínima de 2 noches</li>
+                  <li>Reservar antes del 19/09/2026</li>
+                  <li>Cancelable hasta el día anterior (12h)</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://www.hotel-lauria.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-olive font-medium text-sm hover:text-olive-light transition-colors"
+              >
+                Reservar <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* SB Hotel Ciutat de Tarragona */}
+            <div className="border border-olive/10 rounded-2xl p-8 space-y-5">
+              <div className="flex items-center gap-3">
+                <Hotel className="w-5 h-5 text-olive/40" />
+                <h3 className="font-serif text-2xl text-olive">SB Ciutat de Tarragona</h3>
+              </div>
+
+              <div className="space-y-3 text-olive/70 text-sm leading-relaxed">
+                <p>
+                  <span className="font-medium text-olive">10% de descuento</span> sobre cualquier oferta
+                  <span className="text-olive/50"> (+5% extra al darse de alta en SB People)</span>
+                </p>
+                <div className="bg-offwhite rounded-lg px-4 py-3 flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-olive/40">Código</span>
+                  <span className="font-medium text-olive tracking-wide">D6-ELISA&JORDI</span>
+                </div>
+                <ul className="space-y-1.5 text-olive/60">
+                  <li>Válido para las noches del 2 y 3 de octubre</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://www.sb-hotels.com/ca/hotels/tarragona/ciutat-tarragona/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-olive font-medium text-sm hover:text-olive-light transition-colors"
+              >
+                Reservar <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>
