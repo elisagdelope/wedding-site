@@ -66,6 +66,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
       <video
         ref={videoRef}
         src="/assets/envelope.mp4"
+        poster="/assets/envelope-poster.jpg"
         playsInline
         // @ts-ignore — needed for older iOS Safari
         webkit-playsinline=""
