@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import { motion } from 'motion/react';
 
 interface EnvelopeProps {
@@ -9,6 +9,13 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasClicked, setHasClicked] = useState(false);
   const [isFading, setIsFading] = useState(false);
+  const hasCalledOpen = useRef(false);
+
+  const triggerOpen = useCallback(() => {
+    if (hasCalledOpen.current) return;
+    hasCalledOpen.current = true;
+    onOpen();
+  }, [onOpen]);
 
   const handleClick = () => {
     if (hasClicked) return;
@@ -16,21 +23,42 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
 
     const video = videoRef.current;
     if (video) {
-      video.play();
+      const playPromise = video.play();
+
+      // Handle play() rejection (common on iOS Safari)
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If video can't play, skip directly to content
+          triggerOpen();
+        });
+      }
+
       video.ontimeupdate = () => {
-        if (video.duration - video.currentTime <= 1.3 && !isFading) {
+        if (video.duration && video.duration - video.currentTime <= 1.3 && !isFading) {
           setIsFading(true);
         }
       };
+
+      // Use both onended and a timeout as fallback for iOS Safari
       video.onended = () => {
-        onOpen();
+        triggerOpen();
       };
+
+      // Fallback: if onended doesn't fire, check after expected duration + buffer
+      if (video.duration && isFinite(video.duration)) {
+        setTimeout(triggerOpen, (video.duration * 1000) + 500);
+      } else {
+        // Duration not available yet, listen for it
+        video.onloadedmetadata = () => {
+          setTimeout(triggerOpen, (video.duration * 1000) + 500);
+        };
+      }
     }
   };
 
   return (
     <motion.div
-      className="relative w-full h-screen flex items-center justify-center bg-offwhite cursor-pointer overflow-hidden"
+      className="relative w-full h-dvh flex items-center justify-center bg-offwhite cursor-pointer overflow-hidden"
       onClick={handleClick}
       animate={{ opacity: isFading ? 0 : 1 }}
       transition={{ duration: 1.5, ease: 'easeInOut' }}
@@ -39,6 +67,8 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
         ref={videoRef}
         src="/assets/envelope.mp4"
         playsInline
+        // @ts-ignore — needed for older iOS Safari
+        webkit-playsinline=""
         muted
         preload="auto"
         className="w-full h-full object-cover"

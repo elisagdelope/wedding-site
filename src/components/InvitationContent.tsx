@@ -10,15 +10,17 @@ export const InvitationContent = () => {
   return (
     <div className="relative min-h-screen bg-cream selection:bg-olive/10">
       {/* Hero Section - The "Card" */}
-      <section className="h-screen flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
+      <section className="h-dvh flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <video
-            src="/assets/masfolch-video.mp4" 
+            src="/assets/masfolch-video.mp4"
             autoPlay
             muted
             loop
             playsInline
+            // @ts-ignore
+            webkit-playsinline=""
             className="w-full h-full object-cover"
           />
           {/* Overlay for text readability + bottom fade to olive (matches countdown section) */}
