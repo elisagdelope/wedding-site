@@ -9,6 +9,7 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasClicked, setHasClicked] = useState(false);
   const [isFading, setIsFading] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const hasCalledOpen = useRef(false);
 
   const triggerOpen = useCallback(() => {
@@ -25,12 +26,15 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
     if (video) {
       const playPromise = video.play();
 
-      // Handle play() rejection (common on iOS Safari)
       if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // If video can't play, skip directly to content
-          triggerOpen();
-        });
+        playPromise
+          .then(() => {
+            // Video started — fade out the poster image
+            setIsPlaying(true);
+          })
+          .catch(() => {
+            triggerOpen();
+          });
       }
 
       video.ontimeupdate = () => {
@@ -39,16 +43,13 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
         }
       };
 
-      // Use both onended and a timeout as fallback for iOS Safari
       video.onended = () => {
         triggerOpen();
       };
 
-      // Fallback: if onended doesn't fire, check after expected duration + buffer
       if (video.duration && isFinite(video.duration)) {
         setTimeout(triggerOpen, (video.duration * 1000) + 500);
       } else {
-        // Duration not available yet, listen for it
         video.onloadedmetadata = () => {
           setTimeout(triggerOpen, (video.duration * 1000) + 500);
         };
@@ -66,13 +67,21 @@ export const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
       <video
         ref={videoRef}
         src="/assets/envelope.mp4"
-        poster="/assets/envelope-poster.jpg"
         playsInline
         // @ts-ignore — needed for older iOS Safari
         webkit-playsinline=""
         muted
         preload="auto"
         className="w-full h-full object-cover"
+      />
+
+      {/* Poster image overlay — fades out smoothly when video starts */}
+      <motion.img
+        src="/assets/envelope-poster.jpg"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        animate={{ opacity: isPlaying ? 0 : 1 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
       />
 
       {/* Click instruction */}
