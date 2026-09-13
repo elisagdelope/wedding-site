@@ -61,7 +61,7 @@ export const InvitationContent = () => {
       <section className="relative py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl mb-10 text-olive">Comienza la cuenta atrás</h2>
-          <Countdown targetDate="2026-10-03T12:30:00" />
+          <Countdown targetDate="2026-10-03T12:00:00" />
         </div>
       </section>
 
@@ -94,7 +94,7 @@ export const InvitationContent = () => {
             <div className="flex flex-col items-center gap-3">
               <Clock className="w-6 h-6 text-olive/50" />
               <div>
-                <p className="font-medium text-olive text-lg">12:30h</p>
+                <p className="font-medium text-olive text-lg">12:00h</p>
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
