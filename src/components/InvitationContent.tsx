@@ -166,40 +166,184 @@ export const InvitationContent = () => {
         </div>
       </section>
 
-      {/* Transport Section */}
-      <section className="py-32 bg-offwhite border-y border-olive/5">
+      {/* Autobús Section */}
+      <section id="autobus" className="py-32 bg-offwhite border-y border-olive/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-4xl sm:text-5xl mb-12 text-olive">Transporte</h2>
-          
+          <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-olive">Autobús</h2>
+          <p className="text-olive/70 text-lg leading-relaxed font-serif italic mb-16 max-w-2xl mx-auto">
+            Para quienes hayáis indicado en el RSVP que necesitáis autobús, este es el trayecto de ida y vuelta entre Tarragona y Mas Folch.
+          </p>
+
           <div className="max-w-2xl mx-auto space-y-16">
-            <p className="text-olive/70 text-lg leading-relaxed font-serif italic">
-              Hemos organizado autobuses desde el centro de Tarragona hasta el lugar de la celebración para que podáis disfrutar sin preocupaciones.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+              {/* Ida */}
               <div className="space-y-4">
-                <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">Salida del autobús</h4>
+                <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">Ida</h4>
                 <div className="space-y-1">
-                  <p className="font-serif text-3xl text-olive">Plaza Imperial Tarraco</p>
+                  <p className="font-serif text-3xl text-olive">Portal de Sant Antoni</p>
                   <p className="font-serif text-5xl text-olive/30">14:00h</p>
+                  <p className="text-olive/50 text-sm">Salida aproximada</p>
                 </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Portal+de+Sant+Antoni,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-olive text-cream rounded-full hover:bg-olive-light transition-colors duration-300 font-medium text-sm tracking-wide"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Ver en Google Maps
+                </a>
               </div>
-              
+
+              {/* Vuelta */}
               <div className="space-y-4">
-                <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">Regreso a Tarragona</h4>
-                <div className="space-y-1">
-                  <p className="font-serif text-3xl text-olive">Desde Mas Folch</p>
-                  <p className="font-serif text-5xl text-olive/30">23:00h</p>
+                <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">Vuelta (2 paradas)</h4>
+
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center font-serif text-xs shrink-0">1</span>
+                      <p className="font-serif text-xl text-olive">Plaça Imperial Tàrraco</p>
+                    </div>
+                    <p className="text-olive/50 text-sm leading-snug">
+                      Hotel SB Ciutat Tarragona
+                    </p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Plaça+Imperial+Tàrraco,+Tarragona"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-olive text-cream rounded-full hover:bg-olive-light transition-colors duration-300 font-medium text-sm tracking-wide"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Ver en Google Maps
+                    </a>
+                  </div>
+
+                  <div className="w-px h-5 bg-olive/20 mx-auto" />
+
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center font-serif text-xs shrink-0">2</span>
+                      <p className="font-serif text-xl text-olive">Portal de Sant Antoni</p>
+                    </div>
+                    <p className="text-olive/50 text-sm leading-snug">
+                      Casco antiguo
+                    </p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Portal+de+Sant+Antoni,+Tarragona"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-olive text-cream rounded-full hover:bg-olive-light transition-colors duration-300 font-medium text-sm tracking-wide"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Ver en Google Maps
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div className="pt-8 border-t border-olive/10 space-y-4">
-              <p className="text-olive/70 text-base leading-relaxed">
-                La finca cuenta con un amplio parking, así que no hay ningún problema si preferís desplazaros en coche.
+          </div>
+        </div>
+      </section>
+
+      {/* Aparcamiento Section */}
+      <section className="py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-5xl text-olive text-center mb-6">Aparcamiento</h2>
+          <p className="text-olive/60 text-center font-serif italic text-lg mb-16 max-w-2xl mx-auto">
+            Si preferís venir en coche, aquí tenéis algunas opciones.
+          </p>
+
+          <div className="max-w-2xl mx-auto space-y-12">
+            <div>
+              <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40 mb-3 text-center">En Tarragona</h3>
+              <p className="text-olive/60 text-sm mb-6 max-w-md mx-auto text-center">
+                Algunas opciones cerca del casco antiguo (tiempo aproximado a pie hasta la Catedral).
               </p>
-              <p className="font-serif italic text-olive/50 text-lg">
-                * Por favor, indicad en vuestro RSVP si necesitáis transporte
+              <div className="divide-y divide-olive/10 border border-olive/10 rounded-2xl overflow-hidden text-left">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Circo+Park+Pavapark+Plaça+de+la+Font,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-offwhite transition-colors"
+                >
+                  <div>
+                    <p className="font-medium text-olive text-sm inline-flex items-center gap-1.5">
+                      Circo Park (Pavapark) · Pl. de la Font
+                      <ExternalLink className="w-3 h-3 text-olive/40" />
+                    </p>
+                    <p className="text-olive/50 text-xs mt-0.5">Cubierto · 24 h · Reservable</p>
+                    <p className="text-olive/60 text-xs italic mt-1">El acceso podría estar cerrado por la Diada Castellera</p>
+                  </div>
+                  <span className="text-olive/40 text-xs uppercase tracking-wide whitespace-nowrap shrink-0">4–5 min</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Aparcamiento+Passeig+Torroja,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-offwhite transition-colors"
+                >
+                  <div>
+                    <p className="font-medium text-olive text-sm inline-flex items-center gap-1.5">
+                      Aparcamiento Pg. Torroja
+                      <ExternalLink className="w-3 h-3 text-olive/40" />
+                    </p>
+                    <p className="text-olive/50 text-xs mt-0.5">Exterior · Municipal · 24 h</p>
+                  </div>
+                  <span className="text-olive/40 text-xs uppercase tracking-wide whitespace-nowrap shrink-0">5–7 min</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Parking+Saavedra,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-offwhite transition-colors"
+                >
+                  <div>
+                    <p className="font-medium text-olive text-sm inline-flex items-center gap-1.5">
+                      Parking Saavedra
+                      <ExternalLink className="w-3 h-3 text-olive/40" />
+                    </p>
+                    <p className="text-olive/50 text-xs mt-0.5">Cubierto · Municipal · 24 h</p>
+                  </div>
+                  <span className="text-olive/40 text-xs uppercase tracking-wide whitespace-nowrap shrink-0">6–8 min</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Aparcament+Avinguda+Catalunya,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-offwhite transition-colors"
+                >
+                  <div>
+                    <p className="font-medium text-olive text-sm inline-flex items-center gap-1.5">
+                      Aparcament Av. Catalunya
+                      <ExternalLink className="w-3 h-3 text-olive/40" />
+                    </p>
+                    <p className="text-olive/50 text-xs mt-0.5">Cubierto · Municipal · 24 h</p>
+                  </div>
+                  <span className="text-olive/40 text-xs uppercase tracking-wide whitespace-nowrap shrink-0">7–9 min</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Aparcamiento+del+Cementerio,+Tarragona"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-4 px-5 py-4 hover:bg-offwhite transition-colors"
+                >
+                  <div>
+                    <p className="font-medium text-olive text-sm inline-flex items-center gap-1.5">
+                      Aparcamiento del Cementerio
+                      <ExternalLink className="w-3 h-3 text-olive/40" />
+                    </p>
+                    <p className="text-olive/50 text-xs mt-0.5">Exterior · Gratuito</p>
+                  </div>
+                  <span className="text-olive/40 text-xs uppercase tracking-wide whitespace-nowrap shrink-0">~10 min</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="text-center space-y-2">
+              <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-olive/40">En Mas Folch</h3>
+              <p className="text-olive/70 text-base leading-relaxed">
+                La finca cuenta con un amplio parking propio, así que no hay ningún problema si preferís desplazaros directamente en coche hasta allí.
               </p>
             </div>
           </div>
