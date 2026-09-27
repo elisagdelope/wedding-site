@@ -9,6 +9,7 @@ Revisión del 27/09/2026. Se revisó la portada de gastronomía y artículos esp
 | Tárakon | Plaça del Fòrum, 1, Part Alta | 10–20 € por persona en Salir | 4,4 en Restaurant Guru | Sin recuento público fiable | Croquetas, tostadas y terraza en la plaza |
 | Merceria 34 | Merceria, 34, Part Alta | Tapas individuales desde unos 6,90 € en carta oficial; comida completa en torno a 20–30 € según Restaurant Guru | 4,6 en Restaurant Guru | [@merceria_34](https://www.instagram.com/merceria_34/), sin recuento fiable | Diari recomienda sus bravas; Solete Repsol; opción de tapas creativas algo más cara |
 | 4 Latas | Plaça de la Font, 9, Part Alta | Precio medio 25 € en TheFork; una tapa o vermut puede costar menos | 4,3 / unas 1.200 reseñas en fichas indexadas | [@4latas](https://www.instagram.com/4latas/), sin recuento fiable | Recomendado repetidamente por Diari; gildas, croquetas y bikinis; gasto algo mayor si se come allí |
+| Quattros | Plaça de la Font, 2, Part Alta | Bravas 6,90 €, croquetas de pollo o setas 2 € por unidad (mínimo 4), calamares a la andaluza 11,90 € en carta oficial; el total depende del pedido | No se usa una puntuación no contrastada | Sin perfil oficial contrastado | Terraza con tapas para compartir; recomendado expresamente por los novios |
 | Petit Tàrraco | Baró de les IV Torres, 1, junto a Rambla Nova | Carta informal y menú diario; no se anuncia cifra en la web | 4,4 en Restaurant Guru | [@petittarraco1](https://www.instagram.com/petittarraco1/), perfil público de tapas variadas; sin recuento fiable | Turismo de Catalunya destaca tapas y relación calidad-precio; Tarragona Turisme lo incluye en su plan con amigos |
 | El Xiringuito del Mercat | Dentro del Mercat Central, Plaça Corsini | Reseñas recientes sitúan consumiciones en 10–20 €; depende del pedido | 4,2 / 144 reseñas en Restaurant Guru | Sin recuento fiable | Tortilla, croquetas y callos en el ambiente del mercado, especialmente de día |
 | Tàrraco Taverna | Lleida, 7, junto al Mercat | 1–10 € por persona en Restaurant Guru; comprobar precios actuales | 4,4 / 585 reseñas en Restaurant Guru | Sin recuento fiable | Caña y tapa, embutidos y jamón; opción muy informal y económica; horario indexado indica cierre sábados y domingos |
@@ -24,6 +25,8 @@ Fuentes:
 - Guía Repsol, La Botifarra: https://www.guiarepsol.com/es/fichas/solete/la-botifarra-334143/
 - Carta de La Treva: https://latreva.es/
 - Cartas oficiales: https://www.merceria34.com/carta/ ; https://4latastarragona.es/ ; https://elgallinerdelantiquari.net/la-carta/
+- Carta oficial y dirección de Quattros: https://quattrostarragona.com/para-picar/
+- Dirección de Osteria del Mare para la ruta del Serrallo: https://www.osteriadelmare.es/contacto
 - TheFork, 4 Latas: https://www.thefork.es/restaurante/4-latas-tarragona-r808110/menu
 - Salir.com, comer bien y barato: https://www.salir.com/donde-comer-bien-y-barato-en-tarragona-art-4106.html
 - Turisme de Catalunya, Petit Tàrraco: https://www.catalunya.com/es/continguts/restaurants-bars/bar-restaurant-petit-tarraco-17-14001-12324

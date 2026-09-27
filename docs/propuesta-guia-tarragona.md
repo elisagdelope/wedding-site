@@ -6,7 +6,7 @@ Fuente editorial: `Itinerari_Tarragona_monumentos.docx` compartido por los novio
 
 La sección «Descubre Tarragona» aparece después de Alojamiento, dentro de la invitación. El documento se adapta a una guía de tres días con fichas desplegables: el primer día está abierto y los otros dos se consultan a demanda. Cada visita conserva la hora orientativa, el motivo para ir, una nota práctica cuando procede y un enlace a Google Maps. Debajo aparecen la alternativa de dos días y una selección de doce lugares para quienes prefieren organizarse por su cuenta.
 
-El día 1 sigue murallas, Catedral, vermut y comida en la Part Alta, Circo/Pretorio, Anfiteatro, Balcó del Mediterrani, Rambla Nova y Serrallo. El día 2 recorre Pont del Diable, Teatro romano opcional, Foro, Mercado, comida, Necrópolis opcional y paseo por el Serrallo. El día 3 une Altafulla, Els Munts y Reus. Se conservan los restaurantes citados en el documento dentro de las pausas de cada día.
+El día 1 sigue murallas, Catedral, vermut y comida en la Part Alta (incluido Quattros), Circo/Pretorio, Anfiteatro, Balcó del Mediterrani, Rambla Nova y Serrallo (con Osteria del Mare como alternativa italiana). El día 2 recorre Pont del Diable, Teatro romano opcional, Foro, Mercado, comida, Necrópolis opcional y paseo por el Serrallo. El día 3 une Altafulla, Els Munts y Reus. Se conservan los restaurantes citados en el documento dentro de las pausas de cada día.
 
 La guía evita copiar precios o presentar los horarios de visita como confirmados. El texto advierte que las horas son orientativas y que hay que comprobar aperturas, transporte y reservas. El sábado de la boda no se asigna a ninguna de las rutas.
 

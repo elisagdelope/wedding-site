@@ -57,6 +57,14 @@ const tapas: Place[] = [
     instagram: 'https://www.instagram.com/4latas/',
   },
   {
+    name: 'Quattros',
+    area: 'Plaça de la Font, 2 · Part Alta',
+    style: 'Terraza animada para compartir tapas en el centro de la Part Alta.',
+    pick: 'Bravas, croquetas o calamares a la andaluza.',
+    budget: 'Bravas: 6,90 € · croquetas desde 2 €/ud.',
+    mapQuery: 'Quattros Plaça de la Font 2 Tarragona',
+  },
+  {
     name: 'Petit Tàrraco',
     area: 'Baró de les IV Torres, 1 · Junto a Rambla Nova',
     style: 'Bar de barrio para sentarse en la terraza y pedir varias tapas.',
