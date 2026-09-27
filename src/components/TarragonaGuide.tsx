@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, Compass, MapPin, UtensilsCrossed } from 'lucide-react';
-import { foodSuggestions, guidePlans, type Stop } from './tarragonaGuide';
+import { foodSuggestions, guidePlans, type Stop } from './tarragonaData';
 
 const mapsUrl = (query: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
