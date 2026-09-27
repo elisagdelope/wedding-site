@@ -1,147 +1,70 @@
-export type Stop = {
-  name: string;
-  description: string;
-  mapQuery: string;
-};
-
-export type GuideDay = {
+export type Visit = {
+  time: string;
   title: string;
+  description: string;
+  detail?: string;
+  mapQuery?: string;
+  optional?: boolean;
+};
+
+export type Day = {
+  number: number;
+title: string;
   subtitle: string;
-  stops: Stop[];
+  practical: string;
+  visits: Visit[];
 };
 
-export type GuidePlan = {
-  id: 'tarde' | 'dos-dias' | 'tres-dias';
-  label: string;
-  eyebrow: string;
-  introduction: string;
-  days: GuideDay[];
-  note?: string;
-};
-
-const partAlta: Stop = {
-  name: 'Part Alta y Catedral',
-  description: 'Calles con historia, plazas para perderse y el corazón de la ciudad antigua.',
-  mapQuery: 'Catedral de Tarragona',
-};
-const circus: Stop = {
-  name: 'Circo y Pretorio',
-  description: 'Un paseo por las bóvedas y los restos de la Tàrraco romana.',
-  mapQuery: 'Circ Romà Tarragona',
-};
-const amphitheatre: Stop = {
-  name: 'Anfiteatro',
-  description: 'La postal romana de Tarragona, junto al Mediterráneo.',
-  mapQuery: 'Amfiteatre de Tarragona',
-};
-const balcony: Stop = {
-  name: 'Balcó del Mediterrani',
-  description: 'Una parada para mirar al mar antes de pasear por la Rambla Nova.',
-  mapQuery: 'Balcó del Mediterrani Tarragona',
-};
-const serrallo: Stop = {
-  name: 'El Serrallo',
-  description: 'El barrio marinero, ideal para acabar el día paseando o cenando.',
-  mapQuery: 'El Serrallo Tarragona',
-};
-
-export const guidePlans: GuidePlan[] = [
+export const days: Day[] = [
   {
-    id: 'tarde',
-    label: 'Una tarde',
-    eyebrow: 'Si tenéis unas horas',
-    introduction: 'Una primera vuelta por Tarragona, sin prisas y con el mar al final del camino.',
-    days: [
-      {
-        title: 'Lo esencial de Tarragona',
-        subtitle: 'Un paseo por el centro',
-        stops: [partAlta, circus, amphitheatre, balcony, serrallo],
-      },
+    number: 1,
+    title: 'La Tarragona romana y el casco antiguo',
+    subtitle: 'Murallas, Catedral, Circo y Anfiteatro, hasta llegar al mar.',
+    practical: 'A pie · unos 4–5 km · reservad tiempo para perderos por la Part Alta',
+    visits: [
+      { time: '09:00', title: 'Murallas y Passeig Arqueològic', description: 'Empezad por las murallas para entender cómo se construyó la antigua Tàrraco. El paseo pasa por el Portal de Sant Antoni y las torres del Arzobispo y de Minerva.', detail: 'Calculad 45–60 minutos. Si os apetece una introducción virtual, el itinerario propone TimePort antes de comenzar (unos 30 minutos; comprobad tarifa y disponibilidad).', mapQuery: 'Passeig Arqueològic Tarragona' },
+      { time: '10:15', title: 'Catedral y Pla de la Seu', description: 'Entrad en la Catedral y su claustro, y después pasead por la Pla de la Seu, les Escrivanies Velles y la antigua judería.', detail: 'El mapping de les Voltes del Pallol y la maqueta de Tàrraco son una visita adicional si os interesa la historia.', mapQuery: 'Catedral de Tarragona' },
+      { time: '13:00', title: 'Vermut y comida en la Part Alta', description: 'Un vermut en la Plaça del Fòrum y comida cerca de la Catedral: Casa Balcells, Les Coques o AQ. Para algo más informal, Braseria La Catedral.', mapQuery: 'Plaça del Fòrum Tarragona' },
+      { time: '15:00', title: 'Circo romano y Pretorio', description: 'Bajad a la Plaça del Rei para recorrer las bóvedas del Circo, el Pretorio y la terraza superior. Es una de las visitas que mantendríamos en cualquier ruta.', mapQuery: 'Circ Romà i Pretori Tarragona' },
+      { time: '16:30', title: 'Anfiteatro romano', description: 'Continuad hacia el mar para ver el monumento romano más reconocible de Tarragona.', detail: 'Reservad aproximadamente 45–60 minutos si queréis visitarlo por dentro.', mapQuery: 'Amfiteatre de Tarragona' },
+      { time: '17:30', title: 'Balcó del Mediterrani', description: 'Subid por el Passeig de les Palmeres, tocad ferro y disfrutad de las vistas antes de pasear por la Rambla Nova.', mapQuery: 'Balcó del Mediterrani Tarragona' },
+      { time: '19:00', title: 'Rambla Nova y centro modernista', description: 'Si aún tenéis ganas de caminar, acercaos al Monument als Castellers, el Teatre Metropol y el Mercat Central.', mapQuery: 'Rambla Nova Tarragona' },
+      { time: '20:00', title: 'Cena en el Serrallo', description: 'Acabad el día en el barrio marinero. El itinerario propone L’Àncora, Balandra o El Pòsit para pescado, arroces y cocina mediterránea.', mapQuery: 'El Serrallo Tarragona' },
     ],
   },
   {
-    id: 'dos-dias',
-    label: 'Dos días',
-    eyebrow: 'Para conocer la ciudad',
-    introduction: 'Dos paseos a pie para combinar la Tarragona romana, la vida del centro y el mar.',
-    days: [
-      {
-        title: 'Día 1 · La Tarragona romana',
-        subtitle: 'Part Alta y paseo hacia el mar',
-        stops: [
-          {
-            name: 'Murallas y Passeig Arqueològic',
-            description: 'Un buen comienzo para situarse en la antigua Tàrraco.',
-            mapQuery: 'Passeig Arqueològic Tarragona',
-          },
-          partAlta,
-          circus,
-          amphitheatre,
-          balcony,
-        ],
-      },
-      {
-        title: 'Día 2 · La ciudad de hoy',
-        subtitle: 'Mercado, historia y barrio marinero',
-        stops: [
-          {
-            name: 'Mercat Central',
-            description: 'Un paseo por el mercado y la Plaça Corsini, con tiempo para un vermut.',
-            mapQuery: 'Mercat Central de Tarragona',
-          },
-          {
-            name: 'Fòrum de la Colònia',
-            description: 'Otra cara de la ciudad romana, cerca del centro.',
-            mapQuery: 'Fòrum de la Colònia Tarragona',
-          },
-          serrallo,
-        ],
-      },
+    number: 2,
+    title: 'Más Tàrraco y el Serrallo',
+    subtitle: 'La ciudad romana menos conocida y una tarde tranquila junto al puerto.',
+    practical: 'Pont del Diable requiere desplazamiento · el resto se puede recorrer a pie',
+    visits: [
+      { time: '09:00', title: 'Pont del Diable', description: 'El acueducto de les Ferreres merece algo más que una foto: pasead por su entorno y contempladlo desde distintos ángulos.', detail: 'El itinerario reserva 1–1,5 horas. Está fuera del centro; organizad transporte o saltad esta parada si no os encaja.', mapQuery: 'Pont del Diable Tarragona' },
+      { time: '10:45', title: 'Teatro romano', description: 'Una parada breve en la parte baja de la ciudad para completar la visita a Tàrraco.', detail: 'Prescindible si vais justos de tiempo; comprobad antes si se puede visitar.', mapQuery: 'Teatre Romà Tarragona', optional: true },
+      { time: '11:30', title: 'Fòrum de la Colònia', description: 'Una mirada a la vida cotidiana y política de la ciudad romana, distinta de la monumentalidad del Circo y el Anfiteatro.', mapQuery: 'Fòrum de la Colònia Tarragona' },
+      { time: '12:15', title: 'Mercat Central y Plaça Corsini', description: 'Pasead por el mercado y aprovechad para hacer una pausa o tomar un vermut.', mapQuery: 'Mercat Central de Tarragona' },
+      { time: '13:30', title: 'Comida', description: 'El itinerario propone La Cuineta o Les Coques en el centro; El Llagut, Barquet y Va de Gust si os apetece un arroz.', mapQuery: 'restaurants centre Tarragona' },
+      { time: '15:30', title: 'Necrópolis paleocristiana', description: 'Una visita para quienes disfrutan especialmente de la arqueología y la Antigüedad tardía.', detail: 'Podéis omitirla para disponer de más tiempo libre.', mapQuery: 'Necròpolis Paleocristiana Tarragona', optional: true },
+      { time: '16:30', title: 'El Serrallo y paseo marítimo', description: 'Recorred el barrio pesquero, el puerto y la costa sin un horario apretado. Si hace buen tiempo, podéis terminar en una playa urbana.', mapQuery: 'El Serrallo Tarragona' },
     ],
-    note: '¿Tenéis coche? Podéis cambiar parte del segundo día por el Pont del Diable, en las afueras.',
   },
   {
-    id: 'tres-dias',
-    label: 'Tres días',
-    eyebrow: 'Si alargáis la escapada',
-    introduction: 'A los dos paseos por Tarragona se suma una excursión por los alrededores.',
-    days: [
-      {
-        title: 'Día 1 · La Tarragona romana',
-        subtitle: 'Part Alta y paseo hacia el mar',
-        stops: [
-          { name: 'Murallas', description: 'Empezad por la antigua entrada a Tàrraco.', mapQuery: 'Passeig Arqueològic Tarragona' },
-          partAlta,
-          circus,
-          amphitheatre,
-          balcony,
-        ],
-      },
-      {
-        title: 'Día 2 · Mercado y mar',
-        subtitle: 'Un ritmo más tranquilo',
-        stops: [
-          { name: 'Mercat Central', description: 'Mercado, Plaça Corsini y un vermut.', mapQuery: 'Mercat Central de Tarragona' },
-          { name: 'Fòrum de la Colònia', description: 'Un rincón de la vida cotidiana romana.', mapQuery: 'Fòrum de la Colònia Tarragona' },
-          serrallo,
-        ],
-      },
-      {
-        title: 'Día 3 · Altafulla y Reus',
-        subtitle: 'Excursión con coche o transporte por organizar',
-        stops: [
-          { name: 'Altafulla', description: 'Pasead por la Vila Closa y bajad hasta la playa.', mapQuery: 'Vila Closa Altafulla' },
-          { name: 'Vil·la romana dels Munts', description: 'Una villa romana junto al mar que completa la visita a Tàrraco.', mapQuery: 'Vil·la romana dels Munts Altafulla' },
-          { name: 'Reus modernista', description: 'Casa Navàs, Plaça del Mercadal y un vermut para cerrar el día.', mapQuery: 'Plaça del Mercadal Reus' },
-        ],
-      },
+    number: 3,
+    title: 'Altafulla, Els Munts y Reus',
+    subtitle: 'Una excursión que une villa medieval, patrimonio romano y modernismo.',
+    practical: 'Fuera de Tarragona · planificad coche o conexiones de transporte antes de salir',
+    visits: [
+      { time: '09:00', title: 'Altafulla', description: 'Pasead por la Vila Closa y después bajad hacia les Botigues de Mar y la playa.', mapQuery: 'Vila Closa Altafulla' },
+      { time: '10:30', title: 'Vil·la romana dels Munts', description: 'Una villa residencial romana junto al mar. Después de conocer la ciudad de Tàrraco, aquí se descubre cómo vivía una familia acomodada.', detail: 'El itinerario le reserva 1–1,5 horas y la considera clave si disponéis de tres días.', mapQuery: 'Vil·la romana dels Munts Altafulla' },
+      { time: '12:30', title: 'Comida en Altafulla', description: 'Lola Bistro, Voramar Cal Vitali junto al mar o L’Ermita en la zona histórica son las opciones del itinerario.', mapQuery: 'restaurants Altafulla' },
+      { time: '15:00', title: 'Reus modernista', description: 'Empezad en la Plaça del Mercadal y seguid por Casa Navàs, el Gaudí Centre, el carrer de Monterols, Casa Rull y Casa Gasull.', detail: 'Si tenéis más tiempo, añadid el Institut Pere Mata. Algunas visitas interiores requieren entrada o reserva.', mapQuery: 'Plaça del Mercadal Reus' },
+      { time: '18:00', title: 'Vermut de Reus', description: 'Cerrad el recorrido con un vermut. Si os quedáis a cenar, el documento propone Denise o Le Bistrot.', mapQuery: 'Plaça del Mercadal Reus' },
     ],
-    note: 'Para el tercer día necesitaréis planificar el desplazamiento entre Altafulla y Reus. Si vais en coche, el Pont del Diable es otra visita posible.',
   },
 ];
 
-export const foodSuggestions = [
-  { area: 'Part Alta', names: 'Casa Balcells · Les Coques · AQ', mapQuery: 'restaurants Pla de la Seu Tarragona' },
-  { area: 'El Serrallo', names: 'L’Àncora · Balandra · El Pòsit', mapQuery: 'restaurants El Serrallo Tarragona' },
-  { area: 'Altafulla y Reus', names: 'Lola Bistro · vermut en Reus', mapQuery: 'restaurants Altafulla' },
+export const essentials = [
+  'Anfiteatro romano', 'Circo y Pretorio', 'Catedral de Tarragona',
+  'Murallas', 'Pont del Diable', 'Vil·la romana dels Munts',
+  'Part Alta', 'Balcó del Mediterrani', 'El Serrallo',
+  'Fòrum de la Colònia', 'Altafulla', 'Reus modernista',
 ];
