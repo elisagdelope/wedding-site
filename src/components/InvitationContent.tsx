@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { MapPin, Calendar, Clock, Music, Heart, Send, Hotel, ExternalLink } from 'lucide-react';
 import { Countdown } from './Countdown';
 import { RSVPModal } from './RSVPModal';
+import { TarragonaGuide } from './TarragonaGuide';
 
 export const InvitationContent = () => {
   const [isRSVPOpen, setIsRSVPOpen] = useState(false);
@@ -425,6 +426,8 @@ export const InvitationContent = () => {
           </div>
         </div>
       </section>
+
+      <TarragonaGuide />
 
       {/* RSVP Floating Button */}
       <motion.button
