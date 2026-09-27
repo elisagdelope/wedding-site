@@ -23,7 +23,7 @@ const tapas: Place[] = [
   },
   {
     name: 'La Botifarra',
-    area: 'Cardenal Cervantes, 5 · Centro',
+    area: 'Cardenal Cervantes, 5 · Cerca del Mercat',
     style: 'Un clásico informal de torradas y embutidos catalanes.',
     pick: 'Torradas para compartir y tarta de queso.',
     budget: 'Orientativo: 10–20 € por persona',
@@ -39,32 +39,21 @@ const tapas: Place[] = [
     mapQuery: 'Tárakon Plaça del Fòrum 1 Tarragona',
   },
   {
-    name: '10 de Tapas',
-    area: 'Torres Jordi, 10 · Centro bajo',
-    style: 'Raciones caseras y terraza, también para una comida sin ceremonia.',
-    pick: 'Tortilla de patatas, croquetas y bravas.',
+    name: 'Petit Tàrraco',
+    area: 'Baró de les IV Torres, 1 · Junto a Rambla Nova',
+    style: 'Bar de barrio para sentarse en la terraza y pedir varias tapas.',
+    pick: 'Bravas y tapas variadas; también tienen menú de día.',
+    budget: 'Carta informal',
+    mapQuery: 'Bar Petit Tàrraco Baró de les IV Torres 1 Tarragona',
+    instagram: 'https://www.instagram.com/petittarraco1/',
+  },
+  {
+    name: 'El Xiringuito del Mercat',
+    area: 'Mercat Central · Plaça Corsini',
+    style: 'Bar de mercado para un vermut o tapeo de mediodía entre los puestos.',
+    pick: 'Tortilla, croquetas, callos o un bocadillo.',
     budget: 'Orientativo: 10–20 € por persona',
-    mapQuery: '10 de Tapas Torres Jordi 10 Tarragona',
-    instagram: 'https://www.instagram.com/10detapas/',
-  },
-];
-
-const quickBites: Place[] = [
-  {
-    name: 'son’S Cubanos',
-    area: 'Lleida, 1 · Centro',
-    style: 'Cocina cubana, bocadillos y un ambiente animado para ir en grupo.',
-    pick: 'Más de veinte bocadillos y opciones de plato.',
-    budget: 'Bocadillos desde 3 €',
-    mapQuery: "son'S Cubanos Carrer de Lleida 1 Tarragona",
-  },
-  {
-    name: 'Sabor y Sazón de Niurka',
-    area: 'Arquitecte Rovira, 3 · Centro',
-    style: 'Cocina venezolana casera para comer algo rápido y sabroso.',
-    pick: 'Empanadas, arepas y tequeños.',
-    budget: 'Empanadas desde 5 €',
-    mapQuery: 'Sabor y Sazón de Niurka Arquitecte Rovira 3 Tarragona',
+    mapQuery: 'El Xiringuito del Mercat Mercat Central Tarragona',
   },
 ];
 
@@ -101,19 +90,15 @@ export function FoodGuide() {
           <UtensilsCrossed className="mx-auto mb-5 h-7 w-7 stroke-1 text-olive/50" aria-hidden="true" />
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-olive/50">Para quedar con los amigos</p>
           <h2 id="food-title" className="font-serif text-5xl text-olive sm:text-6xl">Comer y tapear en Tarragona</h2>
-          <p className="mt-6 font-serif text-xl italic leading-relaxed text-olive/65 sm:text-2xl">Sitios informales para compartir unas tapas, tomar algo y seguir la conversación sin gastar demasiado.</p>
+          <p className="mt-6 font-serif text-xl italic leading-relaxed text-olive/65 sm:text-2xl">Tapas de aquí, vermut y platos para compartir por la Part Alta, la Rambla y el Mercat.</p>
         </div>
 
         <div className="mt-14">
-          <h3 className="mb-6 font-serif text-3xl text-olive">De tapeo</h3>
+          <h3 className="mb-6 font-serif text-3xl text-olive">De tapeo, sin alejarse del centro</h3>
           <div className="grid gap-4 md:grid-cols-2">{tapas.map((place) => <PlaceCard key={place.name} place={place} />)}</div>
         </div>
-        <div className="mt-14">
-          <h3 className="mb-6 font-serif text-3xl text-olive">Para comer por poco</h3>
-          <div className="grid gap-4 md:grid-cols-2">{quickBites.map((place) => <PlaceCard key={place.name} place={place} />)}</div>
-        </div>
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Comprobad carta, horarios y disponibilidad antes de ir; el gasto depende de lo que pidáis.</p>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Comprobad carta, horarios y disponibilidad antes de ir; el bar del Mercat es sobre todo una parada de día.</p>
       </div>
     </section>
   );
