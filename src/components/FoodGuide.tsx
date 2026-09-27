@@ -39,6 +39,24 @@ const tapas: Place[] = [
     mapQuery: 'Tárakon Plaça del Fòrum 1 Tarragona',
   },
   {
+    name: 'Merceria 34',
+    area: 'Merceria, 34 · Part Alta',
+    style: 'Tapas clásicas con un toque creativo, cerca de la Catedral.',
+    pick: 'Sus bravas y croquetas; la carta cambia con la temporada.',
+    budget: 'Para una comida: 20–30 € por persona',
+    mapQuery: 'Merceria 34 Tarragona',
+    instagram: 'https://www.instagram.com/merceria_34/',
+  },
+  {
+    name: '4 Latas',
+    area: 'Plaça de la Font, 9 · Part Alta',
+    style: 'Vermut y tapas para compartir en una terraza con ambiente.',
+    pick: 'Gildas, croquetas y bikinis de sobrasada o jamón.',
+    budget: 'Precio medio: 25 € por persona',
+    mapQuery: '4 Latas Plaça de la Font 9 Tarragona',
+    instagram: 'https://www.instagram.com/4latas/',
+  },
+  {
     name: 'Petit Tàrraco',
     area: 'Baró de les IV Torres, 1 · Junto a Rambla Nova',
     style: 'Bar de barrio para sentarse en la terraza y pedir varias tapas.',
@@ -54,6 +72,14 @@ const tapas: Place[] = [
     pick: 'Tortilla, croquetas, callos o un bocadillo.',
     budget: 'Orientativo: 10–20 € por persona',
     mapQuery: 'El Xiringuito del Mercat Mercat Central Tarragona',
+  },
+  {
+    name: 'Tàrraco Taverna',
+    area: 'Lleida, 7 · Junto al Mercat',
+    style: 'Bar sencillo para unas cañas con una tapa y seguir de paseo.',
+    pick: 'Embutidos, jamón y las tapas que acompañan la consumición.',
+    budget: 'Orientativo: 1–10 € por persona',
+    mapQuery: 'Tàrraco Taverna Lleida 7 Tarragona',
   },
 ];
 
@@ -98,7 +124,7 @@ export function FoodGuide() {
           <div className="grid gap-4 md:grid-cols-2">{tapas.map((place) => <PlaceCard key={place.name} place={place} />)}</div>
         </div>
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Comprobad carta, horarios y disponibilidad antes de ir; el bar del Mercat es sobre todo una parada de día.</p>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Merceria 34 y 4 Latas pueden salir algo más caros si os sentáis a comer; Tàrraco Taverna suele cerrar el fin de semana y el bar del Mercat es una parada de día. Comprobad carta y horarios antes de ir.</p>
       </div>
     </section>
   );
