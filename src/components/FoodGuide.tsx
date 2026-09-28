@@ -39,6 +39,14 @@ const tapas: Place[] = [
     mapQuery: 'Tárakon Plaça del Fòrum 1 Tarragona',
   },
   {
+    name: 'La Caseta de les Tres Bessones',
+    area: 'Merceria, 26 · Plaça del Fòrum',
+    style: 'Terraza junto al Fòrum para hacer el vermut y compartir tapas.',
+    pick: 'Bravas, calamares o alguna tapa para acompañar el vermut.',
+    budget: 'Orientativo: 10–20 € por persona',
+    mapQuery: 'La Caseta de les Tres Bessones Merceria 26 Tarragona',
+  },
+  {
     name: 'Merceria 34',
     area: 'Merceria, 34 · Part Alta',
     style: 'Tapas clásicas con un toque creativo, cerca de la Catedral.',
@@ -46,6 +54,15 @@ const tapas: Place[] = [
     budget: 'Para una comida: 20–30 € por persona',
     mapQuery: 'Merceria 34 Tarragona',
     instagram: 'https://www.instagram.com/merceria_34/',
+  },
+  {
+    name: 'Casa Balcells',
+    area: 'Pla de la Seu, 5 · Junto a la Catedral',
+    style: 'Cocina mediterránea en una casa histórica al lado de la Catedral.',
+    pick: 'Milhojas de patata brava, coca de escalivada o croquetas.',
+    budget: 'Bravas 9,50 € · comida más cara',
+    mapQuery: 'Casa Balcells Pla de la Seu 5 Tarragona',
+    instagram: 'https://www.instagram.com/casabalcells/',
   },
   {
     name: '4 Latas',
@@ -74,12 +91,44 @@ const tapas: Place[] = [
     instagram: 'https://www.instagram.com/petittarraco1/',
   },
   {
+    name: 'Bocois',
+    area: 'Rambla Nova, 24 · Cerca del Balcó',
+    style: 'Terraza en la Rambla para picar algo entre paseo y paseo.',
+    pick: 'Bravas, croquetas y tapas para compartir.',
+    budget: 'Orientativo: 10–20 € por persona',
+    mapQuery: 'Bocois Rambla Nova 24 Tarragona',
+  },
+  {
+    name: 'De Vins',
+    area: 'Méndez Núñez, 10 · Cerca de Rambla Nova',
+    style: 'Cocina de producto y vino para una comida con más calma.',
+    pick: 'Huevos rotos con sobrasada o calamar de potera.',
+    budget: 'Para compartir: 12–26 € por plato',
+    mapQuery: 'De Vins Méndez Núñez 10 Tarragona',
+  },
+  {
+    name: 'Negresco',
+    area: 'Fortuny, 7 · Centro',
+    style: 'Bar de toda la vida para tapas y raciones cerca de la Rambla.',
+    pick: 'Preguntad por las tapas y raciones del día.',
+    budget: 'Consultad la carta',
+    mapQuery: 'Negresco Carrer de Fortuny 7 Tarragona',
+  },
+  {
     name: 'El Xiringuito del Mercat',
     area: 'Mercat Central · Plaça Corsini',
     style: 'Bar de mercado para un vermut o tapeo de mediodía entre los puestos.',
     pick: 'Tortilla, croquetas, callos o un bocadillo.',
     budget: 'Orientativo: 10–20 € por persona',
     mapQuery: 'El Xiringuito del Mercat Mercat Central Tarragona',
+  },
+  {
+    name: 'Coimbra Tarragona',
+    area: 'Governador González, 6 · Cerca del Mercat',
+    style: 'Bar de vinos y tapas para compartir cerca del Mercat Central.',
+    pick: 'Bravas o croquetas; también tiene platos de pescado y carne.',
+    budget: 'Para una comida: 20–30 € por persona',
+    mapQuery: 'Coimbra Tarragona Governador González 6',
   },
   {
     name: 'Tàrraco Taverna',
@@ -132,7 +181,7 @@ export function FoodGuide() {
           <div className="grid gap-4 md:grid-cols-2">{tapas.map((place) => <PlaceCard key={place.name} place={place} />)}</div>
         </div>
 
-        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Merceria 34 y 4 Latas pueden salir algo más caros si os sentáis a comer; Tàrraco Taverna suele cerrar el fin de semana y el bar del Mercat es una parada de día. Comprobad carta y horarios antes de ir.</p>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-olive/50">Precios orientativos de cartas y guías consultadas en septiembre de 2026. Casa Balcells, De Vins, Coimbra, Merceria 34 y 4 Latas pueden salir más caros si os sentáis a comer; Tàrraco Taverna suele cerrar el fin de semana y el bar del Mercat es una parada de día. Comprobad carta y horarios antes de ir.</p>
       </div>
     </section>
   );
